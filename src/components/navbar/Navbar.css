@@ -1,0 +1,159 @@
+.navbarContainer {
+  width: auto;
+  height: 70px;
+  background-color: #1877f2; /* Facebook blue */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Left: Logo */
+.navbar-left .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  animation: slideInLeft 0.7s ease-out;
+  transition: transform 0.3s ease;
+}
+
+.navbar-left .logo:hover {
+  transform: scale(1.1);
+}
+
+/* Center: Search Bar */
+.navbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-left: 80px;
+}
+
+.searchbar {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 5px 12px;
+  border-radius: 30px;
+  width: 500px;
+  transition: box-shadow 0.3s ease;
+}
+
+.searchbar:focus-within {
+  box-shadow: 0 0 10px rgba(24, 119, 242, 0.4);
+}
+
+.searchINput {
+  border: none;
+  outline: none;
+  margin-left: 10px;
+  width: 100%;
+  font-size: 14px;
+  background: transparent;
+  color: #333;
+}
+
+/* Right section */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Links */
+.navabarLinks {
+  display: flex;
+  margin-right: 50px;
+  font-size: 16px;
+  gap: 30px;
+}
+
+.navbarLink {
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbarLink:hover {
+  transform: translateY(1.5px);
+}
+.navbarLink::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: white;
+  bottom: -3px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.navbarLink:hover {
+  color: #e0e0e0;
+}
+
+.navbarLink:hover::after {
+  width: 100%;
+}
+
+/* Icons */
+.navbarIcons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.topIconItems {
+  position: relative;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.topIconItems:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.navbarIconBadge {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Profile image */
+.navbarImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.navbarImg:hover {
+  animation: pulse 0.8s ease-in-out;
+  transform: scale(1.2) rotate(5deg);
+}
