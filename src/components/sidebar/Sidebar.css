@@ -1,0 +1,117 @@
+/* Sidebar container */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #f0f2f5;
+  border-right: 1px solid #ccc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Inner wrapper */
+.sidebarwrapper {
+  padding: 20px;
+}
+
+/* Sidebar menu list */
+.sidebarList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Each item in the list */
+.sidebarlistitem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebarlistitem:hover {
+  background-color: #e4e6eb;
+  transform: translateX(4px);
+}
+
+/* Icon next to the list item */
+.sidebarIcon {
+  font-size: 22px;
+  color: #1877f2;
+  margin-right: 15px;
+}
+
+/* List item text */
+.sidebarListItemText {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Show More button */
+.sidebarButton {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1877f2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebarButton:hover {
+  background-color: #155fcb;
+}
+
+/* Divider line */
+.sidebarHr {
+  margin: 20px 0;
+  border: 0.5px solid #ccc;
+}
+
+/* Friend List */
+.sidebarFriendList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Individual friend item */
+.sidebarFriend {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.sidebarFriend:hover {
+  background-color: #e8f0fe;
+}
+
+/* Friend profile image */
+.sidebarFriendImage {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+  border: 2px solid white;
+}
+
+/* Friend name text */
+.sidebarFriendName {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
