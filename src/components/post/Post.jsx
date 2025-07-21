@@ -1,11 +1,13 @@
 import "./Post.css";
 import { MoreVert } from "@mui/icons-material";
 import image from "../../assets/person/2.jpeg";
-import post_imaeg1 from "../../assets/post/1 (1).jpeg";
 import heart_icon from "../../assets/heart.png";
 import like_icon from "../../assets/like.png";
+import {Users} from '../../assets/Data.js'
 
-const Post = () => {
+const Post = ({post}) => {
+  const user = Users.filter(u => u.id===1);
+  console.log(user);
   return (
     <>
       <div className="post">
@@ -14,7 +16,7 @@ const Post = () => {
             <div className="postTopLeft">
               <img className="postProfileImage" src={image} alt="" h />
               <span className="postUserName">Sachin Gupta</span>
-              <span className="postDate">5 mins Ago</span>
+              <span className="postDate">{post.date}</span>
             </div>
 
             <div className="postTopRight">
@@ -22,17 +24,17 @@ const Post = () => {
             </div>
           </div>
           <div className="postCenter">
-            <span className="postText">Hey! Its my first post:)</span>
-            <img className="postImg" src={post_imaeg1} alt="" />
+            <span className="postText">{post?.desc}</span>
+            <img className="postImg" src={post.photo} alt="Error" />
           </div>
           <div className="postBottom">
             <div className="postBottomLeft">
               <img className="likeIcon" src={heart_icon} alt="" />
               <img className="likeIcon" src={like_icon} alt="" />
-              <span className="postLikeCounter">32 people like it!.</span>
+              <span className="postLikeCounter">{post.like} people like it!.</span>
             </div>
             <div className="postBottomRight">
-              <span className="postCommentText">9 comments</span>
+              <span className="postCommentText">{post.comment} comments</span>
             </div>
           </div>
         </div>

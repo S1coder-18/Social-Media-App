@@ -44,7 +44,7 @@ const Sidebar = () => {
             </li>
             <li className="sidebarlistitem">
               <WorkOutline className="sidebarIcon" />
-              <span className="sidebarListItemText">QUestions</span>
+              <span className="sidebarListItemText">Questions</span>
             </li>
             <li className="sidebarlistitem">
               <Event className="sidebarIcon" />
